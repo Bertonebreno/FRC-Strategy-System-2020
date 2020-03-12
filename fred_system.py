@@ -17,7 +17,7 @@ teleopErroPowerCell = 0;  # ter
 teleopParouDeFuncionar = 0;  # tpa
 
 cicloTarget = 0;  # cta
-cicloAutoLine = 0;  # cau
+cicloLine = 0;  # cau
 cicloTrincheira = 0;  # ctr
 cicloRendezvous = 0;  # cre
 cicloAtrasTrincheira = 0;  # cat
@@ -34,41 +34,47 @@ while(True):
     userInput = input();
     log.append([(time.time() - initialTime), userInput]);
 
+    try:
+        number = int(userInput.split()[0]);
+        userInput = userInput.split()[1];
+    except:
+        number = 1
+
     if(userInput == "ali"):
         autoLine += 1
     elif(userInput == "abo"):
-        autoBottom += 1
+        autoBottom += number
     elif(userInput == "aou"):
-        autoOutter += 1
+        autoOutter += number
     elif(userInput == "ain"):
-        autoInner += 1
+        autoInner += number
     elif(userInput == "ape"):
-        autoPegouPowerCell += 1
+        autoPegouPowerCell += number
     elif(userInput == "aer"):
-        autoErroPowerCell += 1
+        autoErroPowerCell += number
         
 
     elif(userInput == "tbo"):
-        teleopBottom += 1
+        teleopBottom += number
     elif(userInput == "tou"):
-        teleopOutter += 1
+        teleopOutter += number
     elif(userInput == "tin"):
-        teleopInner += 1
+        teleopInner += number
     elif(userInput == "ter"):
-        teleopErroPowerCell += 1
+        teleopErroPowerCell += number
     elif(userInput == "tpa"):
         teleopParouDeFuncionar += 1
         
     elif(userInput == "cta"):
-        cicloTarget += 1
-    elif(userInput == "cau"):
-        cicloAutoLine += 1
+        cicloTarget += number
+    elif(userInput == "cli"):
+        cicloLine += number
     elif(userInput == "ctr"):
-        cicloTrincheira += 1
+        cicloTrincheira += number
     elif(userInput == "cre"):
-        cicloRendezvous += 1
+        cicloRendezvous += number
     elif(userInput == "cat"):
-        cicloAtrasTrincheira += 1
+        cicloAtrasTrincheira += number
         
 
     elif(userInput == "ees"):
@@ -104,7 +110,7 @@ print("teleopErroPowerCell: {}".format(teleopErroPowerCell));
 print("teleopParouDeFuncionar: {}".format(teleopParouDeFuncionar));
 
 print("cicloTarget: {}".format(cicloTarget));
-print("cicloAutoLine: {}".format(cicloAutoLine));
+print("cicloLine: {}".format(cicloLine));
 print("cicloTrincheira: {}".format(cicloTrincheira));
 print("cicloRendezvous: {}".format(cicloRendezvous));
 print("cicloAtrasTrincheira: {}".format(cicloAtrasTrincheira));

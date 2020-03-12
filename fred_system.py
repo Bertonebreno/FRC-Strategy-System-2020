@@ -35,13 +35,13 @@ while(True):
     log.append([(time.time() - initialTime), userInput]);
 
     try:
-        number = int(userInput.split()[0]);
-        userInput = userInput.split()[1];
+        number = int(userInput.split()[1]);
+        userInput = userInput.split()[0];
     except:
         number = 1
 
     if(userInput == "ali"):
-        autoLine += 1
+        autoLine += 5
     elif(userInput == "abo"):
         autoBottom += number
     elif(userInput == "aou"):
@@ -78,11 +78,11 @@ while(True):
         
 
     elif(userInput == "ees"):
-        endEstaciona += 1
+        endEstaciona += 5
     elif(userInput == "eso"):
-        endSobe += 1
+        endSobe += 25
     elif(userInput == "eni"):
-        endNivelaSozinho += 1
+        endNivelaSozinho += 15
     elif(userInput == "efa"):
         endFalhouSubida += 1
    
@@ -95,6 +95,10 @@ while(True):
 for i in range(len(log)):    
     print(log[i]);
 
+
+print();
+print("TIME: {}".format(team));
+print("JOGO: {}".format(jogo));
 print();
 print("autoLine: {}".format(autoLine));
 print("autoBottom: {}".format(autoBottom));

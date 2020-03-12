@@ -36,58 +36,60 @@ while(True):
 
     if(userInput == "ali"):
         autoLine += 1
-    if(userInput == "abo"):
+    elif(userInput == "abo"):
         autoBottom += 1
-    if(userInput == "aou"):
+    elif(userInput == "aou"):
         autoOutter += 1
-    if(userInput == "ain"):
+    elif(userInput == "ain"):
         autoInner += 1
-    if(userInput == "ape"):
+    elif(userInput == "ape"):
         autoPegouPowerCell += 1
-    if(userInput == "aer"):
+    elif(userInput == "aer"):
         autoErroPowerCell += 1
         
 
-    if(userInput == "tbo"):
+    elif(userInput == "tbo"):
         teleopBottom += 1
-    if(userInput == "tou"):
+    elif(userInput == "tou"):
         teleopOutter += 1
-    if(userInput == "tin"):
+    elif(userInput == "tin"):
         teleopInner += 1
-    if(userInput == "ter"):
+    elif(userInput == "ter"):
         teleopErroPowerCell += 1
-    if(userInput == "tpa"):
+    elif(userInput == "tpa"):
         teleopParouDeFuncionar += 1
         
-    if(userInput == "cta"):
+    elif(userInput == "cta"):
         cicloTarget += 1
-    if(userInput == "cau"):
+    elif(userInput == "cau"):
         cicloAutoLine += 1
-    if(userInput == "ctr"):
+    elif(userInput == "ctr"):
         cicloTrincheira += 1
-    if(userInput == "cre"):
+    elif(userInput == "cre"):
         cicloRendezvous += 1
-    if(userInput == "cat"):
+    elif(userInput == "cat"):
         cicloAtrasTrincheira += 1
         
 
-    if(userInput == "ees"):
+    elif(userInput == "ees"):
         endEstaciona += 1
-    if(userInput == "eso"):
+    elif(userInput == "eso"):
         endSobe += 1
-    if(userInput == "eni"):
+    elif(userInput == "eni"):
         endNivelaSozinho += 1
-    if(userInput == "efa"):
+    elif(userInput == "efa"):
         endFalhouSubida += 1
-
-    if(userInput == "exit"):
+   
+    elif(userInput == "exit"):
         break;
+
+    else:
+        log[len(log)-1][1] = "ERRO: " + log[len(log)-1][1]
 
 for i in range(len(log)):    
     print(log[i]);
-    print();
 
-
+print();
 print("autoLine: {}".format(autoLine));
 print("autoBottom: {}".format(autoBottom));
 print("autoOutter: {}".format(autoOutter));
